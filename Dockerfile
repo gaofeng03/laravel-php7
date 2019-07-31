@@ -15,6 +15,7 @@ RUN useradd --create-home --no-log-init --shell /bin/bash lewis
 # RUN adduser lewis sudoRUN echo 'lewis:123456' | chpasswd
 
 RUN apt-get update && apt-get install -y \
+    && apt-get install -y libcurl4-openssl-dev pkg-config libssl-dev \
     && apt-get install libzip-dev -y \
     && docker-php-ext-install zip \
     && docker-php-ext-enable zip \
