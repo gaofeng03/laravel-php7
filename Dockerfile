@@ -45,3 +45,5 @@ WORKDIR /var/www/html
 RUN /usr/local/bin/composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 CMD ["php-fpm"]
+
+### end
