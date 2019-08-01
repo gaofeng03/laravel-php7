@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get install libzip-dev -y \
     && docker-php-ext-install zip \
     && docker-php-ext-enable zip \
+    && apt-get install git -y \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
